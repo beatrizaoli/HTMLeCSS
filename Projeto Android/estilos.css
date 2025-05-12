@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: android;
+    src: url("fontes/idroid.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-android: 'android', sans-serif;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+}
+
+header {
+    background-image: linear-gradient(#3CD781, #2DA363, #237B4A);
+    color: white;
+    padding: 20px
+}
+
+nav > a {
+    color: var(--cor0); 
+    text-decoration: none; 
+    padding: 8px;
+    margin-right: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.33);
+    font-weight: bold;   
+}
+
+nav >a:hover {
+    background-color: var(--cor3);
+}
+
+#tituloDaPagina {
+    text-align: center; 
+    font-family: var(--fonte-destaque); 
+    font-weight: normal; 
+    font-size: 3em; 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431); 
+    margin: auto;
+}
+
+.subtituloDaPagina {
+    text-align: center;
+    font: normal normal 1.2em sans-serif;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px 0px 30px 0px;
+}
+
+#tituloDoArtigo {font-family: var(--fonte-android); color: var(--cor4);}
+
+.subtitulosDoArtigo {
+    font-family: var(--fonte-android); 
+    color: var(--cor4); 
+    background-image: linear-gradient(to right, var(--cor1), #ffffff);
+    text-indent: 0.5em;
+}
+/*QUANDO COLOCO TO RIGHT ELE TA SUMINDO*/
+
+
+main {max-width: 1000px; min-width: 300px; margin: auto;}
+
+article {
+    background-color: white;
+    margin:0px 35px 30px 35px;
+    border: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.421);
+    border-radius: 0px 0px 10px 10px;
+}
+
+p {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 2em;
+}
+p > a {
+    text-decoration: none;
+    color: #318657;
+    font-weight: bolder;
+}
+
+p > a:hover {
+    text-decoration: underline;
+    color: var(--cor5);
+}
+
+p > a::after {
+    content: '\1F517';
+}
+span { color: #318657; font-weight: bolder;}
+
+#tituloDoExtra{
+    background-color: #2FA866;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+#caixaDoExtra {
+    background-color:#b6fdd6;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor4) ;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+img, iframe {width: 100%; margin: auto; display: block;}
+/*Coloca margin auto para o conteúdo ser centralizado mas como imagem não é bloco precisa usar display:block; */
+
+.img-pq { width: 180px; } /*Diminui por aqui então esse vai valer mais que o 100% e a imagem terá sempre 200px, então se a tela for menor que 200px ela vai criar uma barra de rolagem lateral. Mas não existem mais telas menores que 200px então tudo bem*/
+
+
+/*COLOCAR AS IMAGENS CENTRALIZADAS --> MARGIN: AUTO*/
+/*COMO COLOCAR A LISTA LADO A LADO*/
+ /*Animação no menu, quando passa em cima faz uma caxinha --> Hover*/
+ /*Imagem vai diminuinfo conforme diminui o navegador*/
+/*SITE PRECISA CHEGAR NUM LIMITE DE LARGURA QUE NÃO É MAIS RESPOSIVO E A MARGEM SE MANTEM*/
